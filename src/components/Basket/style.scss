@@ -1,0 +1,92 @@
+.basket {
+
+  &__item-amount {
+    display: none;
+  }
+  &__total-price {
+    display: none;
+  }
+  &__button {
+    @include button-reset;
+    width: 40px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: $gray-light;
+    border: 0;
+    cursor: pointer;
+    svg {
+      margin-left: -1px;
+      padding-right: 2px;
+      padding-top: 2px;
+      width: 27px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $gray-light;
+    border-radius: 6px;
+
+    width: 380px;
+    height: 30px;
+
+    padding-left: 10px;
+  }
+  .basket__item-amount {
+    display: inline-block;
+  }
+
+  .basket__total-price {
+    display: inline-block;
+  }
+
+  .basket__button {
+    display: inline-block;
+    // width: 60px;
+    // height: 45px;
+    svg {
+      margin-left: -1px;
+      padding-right: 2px;
+      padding-top: 2px;
+      // width: 40px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $gray-light;
+    border-radius: 6px;
+
+    width: 500px;
+    height: 45px;
+
+    padding-left: 10px;
+  }
+  .basket__item-amount {
+    display: inline-block;
+  }
+
+  .basket__total-price {
+    display: inline-block;
+  }
+
+  .basket__button {
+    display: inline-block;
+    width: 60px;
+    height: 45px;
+    svg {
+      margin-left: -1px;
+      padding-right: 2px;
+      padding-top: 2px;
+      width: 40px;
+    }
+  }
+}

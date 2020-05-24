@@ -1,0 +1,21 @@
+.callback {
+  @include button-reset;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.callback__text {
+  font-size: 0.9em;
+  display: block;
+}
+.callback__icon {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .callback__icon {
+    display: block;
+    margin-right: 16px;
+  }
+}

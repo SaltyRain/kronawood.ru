@@ -1,0 +1,28 @@
+.telephone {
+  &__icon {
+    width: 30px;
+  }
+  &__number {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .telephone {
+    display: flex;
+    align-items: center;
+  }
+  .telephone__icon {
+    display: none;
+  }
+  .telephone__number {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .telephone__icon {
+    display: block;
+    margin-right: 16px;
+  }
+}

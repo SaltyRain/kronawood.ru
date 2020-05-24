@@ -1,0 +1,140 @@
+.main-header {
+  &__gray {
+    background-color: $gray-light;
+  }
+  &__orange {
+    background-color: $orange;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+  }
+  &__gray-wrapper {
+    max-width: 1200px;
+    margin: auto;
+
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+  &__orange-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+
+  }
+
+}
+
+.main-header__logo {
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons__item {
+  margin-left: 15px;
+  &:last-child {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 550px) {
+  .main-header__action-buttons {
+    min-width: 15%;
+  }
+}
+
+.main-header__search {
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+}
+
+
+.main-header__logo {
+  width: 45px;
+}
+
+
+@media (min-width: 768px){
+  .main-header__gray-wrapper {
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main-header__orange-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .action-buttons {
+
+    flex-grow: 1;
+
+    justify-content: space-around;
+    max-width: 350px;
+
+  }
+  .main-header__hamburger {
+    display: none;
+  }
+
+  .main-header__logo{
+    width: 55px;
+
+  }
+
+  .main-header__search {
+    position: static;
+    order: 3;
+  }
+
+
+  .main-header__orange-wrapper {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  .action-buttons {
+    max-width: 450px;
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-header__logo {
+    width: 75px;
+  }
+  .main-header__gray-wrapper {
+    height: 80px;
+  }
+  .main-header__orange-wrapper {
+    height: 70px;
+  }
+
+  .action-buttons {
+    max-width: 550px;
+
+  }
+}
+
+@media (min-width: 1300px) {
+  .action-buttons {
+    max-width: 650px;
+
+  }
+}
