@@ -3,6 +3,7 @@ import { graphql, StaticQuery} from "gatsby"
 import Header from "../Header"
 import { Helmet } from "react-helmet"
 
+import SEO from "../seo"
 
 const Layout = ({ children }) => (
   <>
@@ -21,6 +22,9 @@ const Layout = ({ children }) => (
     `}
     render = {props => <Helmet><link rel="icon" href={props.allWordpressWpFavicon.edges[0].node.url.source_url}/> </Helmet>}/>
 
+    <SEO
+      title="ТПП Крона"
+    />
     <Header/>
     <main>
       {children}

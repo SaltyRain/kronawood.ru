@@ -13,7 +13,7 @@ import "./style.scss"
 const Header = () => {
   return (
     <header className="main-header">
-      <h1 className="visually-hidden"></h1>
+      <h1 className="visually-hidden">Продажа пиломатериалов в Санкт-Петербурге и Ленинградской области</h1>
 
       <div className="main-header__gray">
         <div className="main-header__gray-wrapper">

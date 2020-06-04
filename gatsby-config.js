@@ -25,11 +25,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `ТПП Крона`,
+        short_name: `ТПП Крона`,
+        description: `Продажа пиломатериалов в Санкт-Петербурге и Ленинградской области`,
+        lang: `ru`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#E0E0E0`,
+        theme_color: `#E0E0E0`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
