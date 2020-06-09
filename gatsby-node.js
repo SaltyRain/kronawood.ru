@@ -49,6 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
         const homePageTemplate = path.resolve("./src/templates/home-page-template.js")
         const leftSidebarTemplate = path.resolve("./src/templates/left-sidebar-template.js")
         const tabsTemplate = path.resolve("./src/templates/tabs-template.js")
+        const articlesPageTemplate = path.resolve("./src/templates/articles-page-template.js")
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
@@ -66,6 +67,7 @@ exports.createPages = ({ graphql, actions }) => {
             component: slash(edge.node.template === 'home_page_template.php' ? homePageTemplate
               : edge.node.template === 'left_sidebar_template.php' ? leftSidebarTemplate
               : edge.node.template === 'tabs_template.php' ? tabsTemplate
+              : edge.node.template === 'articles_page_template.php' ? articlesPageTemplate
               : pageTemplate),
 
             context: edge.node,

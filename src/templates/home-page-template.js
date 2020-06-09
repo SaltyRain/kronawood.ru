@@ -1,20 +1,15 @@
 import React from 'react'
-import { graphql } from "gatsby"
-
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 
+import SiteIntro from "../components/SiteIntro"
 import Notice from "../components/Notice"
 import Partners from "../components/Partners"
-import ArticleList from "../components/ArticleList"
 import LastArticles from "../components/LastArticles"
-export default ({pageContext, data}) => (
+export default ({data}) => (
   <Layout>
-    <div className="container">
-      <h1 dangerouslySetInnerHTML={{__html: pageContext.title}}/>
-      <div dangerouslySetInnerHTML={{__html: pageContext.content}}/>
 
-      <div>Это шаблон главной страницы</div>
-    </div>
+   <SiteIntro/>
 
 
     <Notice
@@ -22,7 +17,6 @@ export default ({pageContext, data}) => (
     />
     <div className="container">
       <Partners/>
-      <ArticleList articles = {data.allWordpressPost.edges}/>
       <LastArticles articles = {data.allWordpressPost.edges}/>
     </div>
 
@@ -39,6 +33,10 @@ export const query = graphql`
           title
           excerpt
           content
+          featured_media {
+            alt_text
+            source_url
+          }
         }
       }
     }

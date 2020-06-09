@@ -10,7 +10,6 @@ export default ({pageContext}) => {
       <div className="container">
         <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }}/>
         <div dangerouslySetInnerHTML={{ __html: pageContext.content }}/>
-        <p>Шаблон обычной страницы</p>
       </div>
     </Layout>
   )

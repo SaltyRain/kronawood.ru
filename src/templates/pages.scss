@@ -1,0 +1,42 @@
+.articles-intro {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.post {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.post img {
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.dt-logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.blocks-gallery-grid {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blocks-gallery-item {
+  max-width: 300px ;
+}
+
+@media (min-width: 768px) {
+  .articles-intro {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+  }
+}

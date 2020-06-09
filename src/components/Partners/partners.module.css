@@ -31,7 +31,7 @@
 }
 
 .logo {
-    min-width: 200px;
+    min-width: 120px;
     filter: grayscale(100%);
     opacity: 0.6;
     transition: .2s;
@@ -41,7 +41,7 @@
     opacity: 1;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
     .row {
         flex-direction: row;
         flex-grow: 1;
@@ -49,5 +49,11 @@
 
     .item {
         padding-top: 8px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .item {
+        min-width: 200px;
     }
 }

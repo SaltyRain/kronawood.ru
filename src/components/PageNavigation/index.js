@@ -3,10 +3,6 @@ import { Link } from "gatsby"
 import "./style.scss"
 
 const PageNavigation = ({headings}) => {
-  // console.log(typeof pageNavigationItems);
-  // console.log(pageNavigationItems);
-  // console.log(pageNavigationItems.toString());
-  // alert(pageNavigationItems);
   const items = headings.map(item =>
     <li key={item} className="page-navigation__item">
       <Link to="/" dangerouslySetInnerHTML={{__html: item}}>

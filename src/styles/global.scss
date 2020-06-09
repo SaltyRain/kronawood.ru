@@ -15,7 +15,20 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
 }
+main {
+    padding-bottom: 30px;
+}
 
+h2 {
+    font-size: 1.7em;
+}
+h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.6em;
+}
+h4 {
+    font-size: 1.2em;
+}
 img {
     max-width: 100%;
 }
@@ -30,24 +43,58 @@ a {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
-    &--flex {
-        display: flex;
+
+}
+
+.container--flex {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .container--flex {
+        flex-direction: row;
     }
 }
-.left-sidebar-content {
-    width: 75%;
-    margin-left: 10px;
-    padding: 5px 10px;
+
+@media (max-width: 550px) {
+    .wp-block-table {
+        display: none;
+    }
 }
 
 .wp-block-columns {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .wp-block-columns {
+        flex-direction: row;
+    }
 }
 
 .wp-block-column {
-    //width: 100%;
+    width: 100% !important;
+}
+@media (min-width: 768px) {
+    .wp-block-column {
+        width: 50% !important;
+    }
+}
 
+.wp-block-table  {
+    text-align: center;
+    border: 1px solid black;
+    tr, td {
+        border: 1px solid gray;
+        padding: 6px;
+        width: 50%;
+    }
+    figcaption {
+        margin-top: 6px;
+        margin-bottom: 4px;
+        font-size: 0.9rem;
+        color: #404040;
+    }
 }
 .visually-hidden {
     position: absolute;
@@ -57,4 +104,26 @@ a {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.button {
+    background: $orange;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px 20px;
+    &:hover {
+        background: $orange-dark;
+    }
+}
+
+.wp-block-image {
+    position: relative;
+    //width: 200px;
+    //max-height: 300px;
+
+    image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 }

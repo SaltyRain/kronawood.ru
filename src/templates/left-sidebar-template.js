@@ -4,18 +4,10 @@ import SideBar from "../components/SideBar"
 
 
 const LeftSidebarTemplate = ({pageContext}) => {
-  let regexp = /<h2>([\s\S]*?)<\/h2>/g;
+  let regexp = /<h[2-4]>([\s\S]*?)<\/h[2-4]>/g;
   let headings = pageContext.content.match(regexp);
-
-
-  // alert(typeof headings);
   headings = Array.from(headings);
-  // alert(headings[0]);
-  // alert(headings);
   console.log(headings);
-  // alert(headings[0]);
-  // alert(headings[0].input);
-  // console.log(headings[0].input);
   return (
     <Layout>
       <h1 className="visually-hidden" dangerouslySetInnerHTML={{ __html: pageContext.title }}/>
@@ -23,7 +15,6 @@ const LeftSidebarTemplate = ({pageContext}) => {
 
         <SideBar headings = {headings}/>
         <div className="left-sidebar-content" dangerouslySetInnerHTML={{ __html: pageContext.content }}/>
-
 
       </div>
 

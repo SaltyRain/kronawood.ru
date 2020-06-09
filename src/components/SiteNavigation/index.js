@@ -30,7 +30,7 @@ const SiteNavigation = (props) => {
     <ul className={classes} id="site-navigation">
       {allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
         <li key={item.title} className="site-navigation__item" >
-          <Link to={item.object_slug}  className="site-navigation__link">
+          <Link to={item.object_slug}  className="site-navigation__link" activeStyle={{ color: "white" }}>
             {item.title}
           </Link>
         </li>
