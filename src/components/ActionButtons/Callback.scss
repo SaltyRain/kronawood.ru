@@ -9,7 +9,7 @@
 .callback__text {
   font-size: 0.9em;
   display: block;
-  margin-top: -5x;
+  margin-top: -2x;
 }
 .callback__icon {
   display: none;
@@ -21,6 +21,9 @@
   }
 }
 @media (min-width: 1200px) {
+  .callback {
+    height: 60px;
+  }
   .callback__icon {
     display: block;
     margin-right: 16px;
