@@ -3,6 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import "./style.scss"
 import Img from "gatsby-image"
 
+
 const Footer = () => {
   const images = useStaticQuery(graphql`
   query {
