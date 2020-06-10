@@ -40,7 +40,7 @@ const Callback = () => {
           </a>
           <div className="header"> Заказать обратный звонок </div>
           <div className="content">
-            <form className="callback-form" action="POST" data-netlify="true">
+            <form className="callback-form" action="submission" method="POST" data-netlify="true">
               {/*<fieldset>*/}
               {/*  <legend className="header">Контактная информация</legend>*/}
                 <p><label htmlFor="name">Представьтесь</label><input className="form-input" type="text" id="name"/></p>
