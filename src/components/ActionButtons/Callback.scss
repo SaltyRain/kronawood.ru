@@ -29,3 +29,89 @@
     margin-right: 16px;
   }
 }
+
+
+
+//______________MODAL_____________//
+.modal {
+  //font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+//_____CALLBACK-FORM______//
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    //margin-top: 12px;
+    margin: 0;
+    margin-top: 8px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    label {
+      margin-bottom: 6px;
+    }
+
+  }
+}
+
+.form-button {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  height: 40px;
+  width: 200px;
+  outline: 0;
+  border: 0;
+}
+
+.form-input {
+  height: 30px;
+  width: 200px;
+  margin-bottom: 8px;
+}
+
+// ______popup____//
+.contact-form-popup {
+  width: 30% !important;
+}
+
+.popup-content {
+  width: 25% !important;
+}

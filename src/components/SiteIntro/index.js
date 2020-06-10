@@ -14,7 +14,7 @@ const SiteIntro = () => {
           <p className="site-intro__text">
             Производственная база пиломатериалов в Санкт-Петербурге. Работаем как с частными лицами, так и с компаниями.
           </p>
-          <Link to="/" className="site-intro__button button">Перейти в каталог</Link>
+          {/*<Link to="/" className="site-intro__button button">Перейти в каталог</Link>*/}
         </div>
 
 

@@ -3,6 +3,7 @@ import {graphql, useStaticQuery, Link} from "gatsby";
 
 import "./style.scss"
 
+
 const SiteNavigation = (props) => {
   const classes = "site-navigation " + props.class;
   const { allWordpressWpApiMenusMenusItems } = useStaticQuery(

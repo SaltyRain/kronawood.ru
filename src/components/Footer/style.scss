@@ -34,6 +34,17 @@
   &--row {
     margin-left: 0;
     margin-right: 0.4em;
+    height: 60px;
+
+
+  }
+}
+
+.social-media-icon {
+  width: 40px;
+  &:hover {
+    width: 45px;
+    margin-left: -5px;
   }
 }
 

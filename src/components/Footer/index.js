@@ -1,8 +1,34 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import "./style.scss"
+import Img from "gatsby-image"
 
 const Footer = () => {
+  const images = useStaticQuery(graphql`
+  query {
+    vk: file(relativePath: { eq: "vk-color.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    instagram: file(relativePath: { eq: "instagram-color.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    facebook: file(relativePath: { eq: "facebook-color.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `)
   return (
     <footer className="footer">
       <div className="container footer__container">
@@ -19,24 +45,24 @@ const Footer = () => {
         <section className="footer__section">
           <h4 className="footer__section-title">Каталог товаров</h4>
           <ul className="footer__section-items">
-            <li className="footer__section-item"><Link to='/'>Доска / Брус</Link></li>
-            <li className="footer__section-item"><Link to='/'>Вагонка Блок-хаус Планкен</Link></li>
-            <li className="footer__section-item"><Link to='/'>Термодревесина</Link></li>
-            <li className="footer__section-item"><Link to='/'>Террасная доска / Доска пола</Link></li>
-            <li className="footer__section-item"><Link to='/'>Погонаж</Link></li>
-            <li className="footer__section-item"><Link to='/'>Готовые изделия</Link></li>
+            <li className="footer__section-item">Доска / Брус</li>
+            <li className="footer__section-item">Вагонка Блок-хаус Планкен</li>
+            <li className="footer__section-item">Термодревесина</li>
+            <li className="footer__section-item">Террасная доска / Доска пола</li>
+            <li className="footer__section-item">Погонаж</li>
+            <li className="footer__section-item">Готовые изделия</li>
           </ul>
         </section>
 
         <section className="footer__section">
           <h4 className="footer__section-title">Пиломатериалы</h4>
           <ul className="footer__section-items">
-            <li className="footer__section-item"><Link to='/'>Нестроганые</Link></li>
-            <li className="footer__section-item"><Link to='/'>Строганые</Link></li>
-            <li className="footer__section-item"><Link to='/'>Конструкционные</Link></li>
-            <li className="footer__section-item"><Link to='/'>Отделочные</Link></li>
-            <li className="footer__section-item"><Link to='/'>Хвоя</Link></li>
-            <li className="footer__section-item"><Link to='/'>Лиственница</Link></li>
+            <li className="footer__section-item">Нестроганые</li>
+            <li className="footer__section-item">Строганые</li>
+            <li className="footer__section-item">Конструкционные</li>
+            <li className="footer__section-item">Отделочные</li>
+            <li className="footer__section-item">Хвоя</li>
+            <li className="footer__section-item">Лиственница</li>
           </ul>
         </section>
         <section className="footer__section">
@@ -52,9 +78,9 @@ const Footer = () => {
           <section className="footer__subsection">
             <h4 className="footer__section-title">Присоединяйтесь</h4>
             <ul className="footer__section-items footer__section-items--row">
-              <li className="footer__section-item footer__section-item--row"><Link to='/'>Вконтакте</Link></li>
-              <li className="footer__section-item footer__section-item--row"><Link to='/'>Инстаграм</Link></li>
-              <li className="footer__section-item footer__section-item--row"><Link to='/'>Фейсбук</Link></li>
+              <li className="footer__section-item footer__section-item--row"><a href="https://vk.com/kronawood"><Img className="social-media-icon" fluid={images.vk.childImageSharp.fluid} alt="Мы в вконтакте"/> </a></li>
+              <li className="footer__section-item footer__section-item--row"><a href="https://www.instagram.com/kronawood_spb/"><Img className="social-media-icon" fluid={images.instagram.childImageSharp.fluid} alt="Мы в инстаграмме"/> </a></li>
+              <li className="footer__section-item footer__section-item--row"><a href="https://www.facebook.com/kronawood.spb"><Img className="social-media-icon" fluid={images.facebook.childImageSharp.fluid} alt="Мы на фейсбуке"/> </a></li>
             </ul>
           </section>
         </section>

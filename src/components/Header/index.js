@@ -23,7 +23,7 @@ const Header = () => {
             </div>
           </Link>
           <ActionButtons/>
-          <Search class="main-header__search"/>
+          {/*<Search class="main-header__search"/>*/}
         </div>
       </div>
       {/* main-header__gray */}
@@ -31,7 +31,7 @@ const Header = () => {
       <div className="main-header__orange">
         <div className="main-header__orange-wrapper">
           <SiteNavigation class="main-header__site-navigation"/>
-          <Basket/>
+          {/*<Basket/>*/}
         </div>
       </div>
     {/* main-header__orange */}
