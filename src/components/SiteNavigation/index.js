@@ -27,11 +27,26 @@ const SiteNavigation = (props) => {
     }
     `
   )
+  const isPartiallyActive = ({
+                               isPartiallyCurrent
+                             }) => {
+    return isPartiallyCurrent
+      ? { className: "active" }
+      : {}
+  }
+  // const PartialNavLink = props => (
+  //   <Link getProps={isPartiallyActive} {...props} />
+  // )
   return (
     <ul className={classes} id="site-navigation">
       {allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
         <li key={item.title} className="site-navigation__item" >
-          <Link to={item.object_slug}  className="site-navigation__link" activeStyle={{ color: "white" }}>
+          <Link
+            to={item.object_slug}
+            className="site-navigation__link"
+            activeStyle={{ color: "white" }}
+            partiallyActive={true}
+            >
             {item.title}
           </Link>
         </li>

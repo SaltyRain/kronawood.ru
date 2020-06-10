@@ -108,10 +108,18 @@
 }
 
 // ______popup____//
-.contact-form-popup {
-  width: 30% !important;
-}
 
 .popup-content {
-  width: 25% !important;
+  width: 90% !important;
 }
+@media (min-width: 768px) {
+  .popup-content {
+    width: 50% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .popup-content {
+    width: 25% !important;
+  }
+}
+
