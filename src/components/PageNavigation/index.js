@@ -5,9 +5,9 @@ import "./style.scss"
 const PageNavigation = ({headings}) => {
   const items = headings.map(item =>
     <li key={item} className="page-navigation__item">
-      <Link to="/" dangerouslySetInnerHTML={{__html: item}}>
+      <div dangerouslySetInnerHTML={{__html: item}}>
 
-      </Link>
+      </div>
     </li>)
   return (
     <section className="page-navigation">
